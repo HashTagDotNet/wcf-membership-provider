@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="com.ScrimpNet.Security/2011/03" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="com.ScrimpNet.Security/2011/03" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="com.ScrimpNet.Security/2011/03/Imports">
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd0" namespace="com.ScrimpNet.Security/2011/03" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HashTag" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd4" namespace="HashTag.com/2011/03/" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" />
+      <xsd:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Web.Security" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfApplicationService_RolesAddUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RolesAddUsers" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesAddUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RolesAddUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesAddUsers_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q1:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleCreate" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleCreate_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q2:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleDelete" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleDelete_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q3:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersInRole" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersInRole_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q4:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:RolesGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RolesGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesGetAll_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q5:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleExists" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleExists_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q6:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesForUser_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q7:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleGetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleGetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleGetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleGetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleGetUsers_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q8:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleContainsUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleContainsUser" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleContainsUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleContainsUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RoleContainsUser_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q9:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesRemoveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RolesRemoveUsers" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesRemoveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RolesRemoveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_RolesRemoveUsers_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q10:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePassword_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q11:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePasswordQA_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialChangePasswordQA" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePasswordQA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialChangePasswordQAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialChangePasswordQA_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q12:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialVerify" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialVerify_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q13:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialDefaultsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialDefaultsGet" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialDefaultsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialDefaultsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialDefaultsGet_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q14:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUpdate_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q15:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityDelete" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityDelete_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q16:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByEmail_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q17:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByName" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_FindUsersByName_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q18:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetAll_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q19:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_GetNumberOfUsersOnline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfUsersOnline" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_GetNumberOfUsersOnline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfUsersOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_GetNumberOfUsersOnline_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q20:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetPassword_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q21:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByKey" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByKey_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q22:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByName" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByName_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q23:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByEMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByEMail" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByEMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityGetByEMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityGetByEMail_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q24:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialReset_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialReset" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialReset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialReset_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q25:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_SettingsRetrieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_SettingsRetrieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettingsRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_SettingsRetrieve_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q26:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUnlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialUnlock" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUnlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialUnlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialUnlock_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q27:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityUpdate_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q28:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialActivate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialActivate" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialActivate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CredentialActivateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_CredentialActivate_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q29:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityCreate" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityCreate_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q30:WcfFault" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityExists" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentityExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfApplicationService_IdentityExists_WcfFaultFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/HashTag.ServiceModel" name="detail" element="q31:WcfFault" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfApplicationService">
+    <wsdl:operation name="RolesAddUsers">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesAddUsers" message="tns:IWcfApplicationService_RolesAddUsers_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesAddUsersResponse" message="tns:IWcfApplicationService_RolesAddUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesAddUsersWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RolesAddUsers_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleCreate">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleCreate" message="tns:IWcfApplicationService_RoleCreate_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleCreateResponse" message="tns:IWcfApplicationService_RoleCreate_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleCreateWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RoleCreate_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleDelete">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleDelete" message="tns:IWcfApplicationService_RoleDelete_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleDeleteResponse" message="tns:IWcfApplicationService_RoleDelete_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleDeleteWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RoleDelete_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersInRole">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersInRole" message="tns:IWcfApplicationService_FindUsersInRole_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersInRoleResponse" message="tns:IWcfApplicationService_FindUsersInRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersInRoleWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_FindUsersInRole_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RolesGetAll">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesGetAll" message="tns:IWcfApplicationService_RolesGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesGetAllResponse" message="tns:IWcfApplicationService_RolesGetAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesGetAllWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RolesGetAll_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleExists">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleExists" message="tns:IWcfApplicationService_RoleExists_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleExistsResponse" message="tns:IWcfApplicationService_RoleExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleExistsWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RoleExists_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RolesForUser">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesForUser" message="tns:IWcfApplicationService_RolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesForUserResponse" message="tns:IWcfApplicationService_RolesForUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesForUserWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RolesForUser_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleGetUsers">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleGetUsers" message="tns:IWcfApplicationService_RoleGetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleGetUsersResponse" message="tns:IWcfApplicationService_RoleGetUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleGetUsersWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RoleGetUsers_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleContainsUser">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleContainsUser" message="tns:IWcfApplicationService_RoleContainsUser_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleContainsUserResponse" message="tns:IWcfApplicationService_RoleContainsUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleContainsUserWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RoleContainsUser_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RolesRemoveUsers">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesRemoveUsers" message="tns:IWcfApplicationService_RolesRemoveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesRemoveUsersResponse" message="tns:IWcfApplicationService_RolesRemoveUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesRemoveUsersWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_RolesRemoveUsers_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialChangePassword">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePassword" message="tns:IWcfApplicationService_CredentialChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordResponse" message="tns:IWcfApplicationService_CredentialChangePassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialChangePassword_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialChangePasswordQA">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordQA" message="tns:IWcfApplicationService_CredentialChangePasswordQA_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordQAResponse" message="tns:IWcfApplicationService_CredentialChangePasswordQA_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordQAWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialChangePasswordQA_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialVerify">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialVerify" message="tns:IWcfApplicationService_CredentialVerify_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialVerifyResponse" message="tns:IWcfApplicationService_CredentialVerify_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialVerifyWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialVerify_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialDefaultsGet">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialDefaultsGet" message="tns:IWcfApplicationService_CredentialDefaultsGet_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialDefaultsGetResponse" message="tns:IWcfApplicationService_CredentialDefaultsGet_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialDefaultsGetWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialDefaultsGet_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialUpdate">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUpdate" message="tns:IWcfApplicationService_CredentialUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUpdateResponse" message="tns:IWcfApplicationService_CredentialUpdate_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUpdateWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialUpdate_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityDelete">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityDelete" message="tns:IWcfApplicationService_IdentityDelete_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityDeleteResponse" message="tns:IWcfApplicationService_IdentityDelete_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityDeleteWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityDelete_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByEmail">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByEmail" message="tns:IWcfApplicationService_FindUsersByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByEmailResponse" message="tns:IWcfApplicationService_FindUsersByEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByEmailWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_FindUsersByEmail_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByName" message="tns:IWcfApplicationService_FindUsersByName_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByNameResponse" message="tns:IWcfApplicationService_FindUsersByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByNameWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_FindUsersByName_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetAll">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetAll" message="tns:IWcfApplicationService_IdentityGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetAllResponse" message="tns:IWcfApplicationService_IdentityGetAll_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetAllWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityGetAll_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfUsersOnline">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/GetNumberOfUsersOnline" message="tns:IWcfApplicationService_GetNumberOfUsersOnline_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/GetNumberOfUsersOnlineResponse" message="tns:IWcfApplicationService_GetNumberOfUsersOnline_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/GetNumberOfUsersOnlineWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_GetNumberOfUsersOnline_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetPassword">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetPassword" message="tns:IWcfApplicationService_IdentityGetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetPasswordResponse" message="tns:IWcfApplicationService_IdentityGetPassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetPasswordWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityGetPassword_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByKey">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByKey" message="tns:IWcfApplicationService_IdentityGetByKey_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByKeyResponse" message="tns:IWcfApplicationService_IdentityGetByKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByKeyWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityGetByKey_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByName">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByName" message="tns:IWcfApplicationService_IdentityGetByName_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByNameResponse" message="tns:IWcfApplicationService_IdentityGetByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByNameWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityGetByName_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByEMail">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByEMail" message="tns:IWcfApplicationService_IdentityGetByEMail_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByEMailResponse" message="tns:IWcfApplicationService_IdentityGetByEMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByEMailWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityGetByEMail_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialReset">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialReset" message="tns:IWcfApplicationService_CredentialReset_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialResetResponse" message="tns:IWcfApplicationService_CredentialReset_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialResetWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialReset_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettingsRetrieve">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/SettingsRetrieve" message="tns:IWcfApplicationService_SettingsRetrieve_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/SettingsRetrieveResponse" message="tns:IWcfApplicationService_SettingsRetrieve_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/SettingsRetrieveWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_SettingsRetrieve_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialUnlock">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUnlock" message="tns:IWcfApplicationService_CredentialUnlock_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUnlockResponse" message="tns:IWcfApplicationService_CredentialUnlock_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUnlockWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialUnlock_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityUpdate">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityUpdate" message="tns:IWcfApplicationService_IdentityUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityUpdateResponse" message="tns:IWcfApplicationService_IdentityUpdate_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityUpdateWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityUpdate_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CredentialActivate">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialActivate" message="tns:IWcfApplicationService_CredentialActivate_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialActivateResponse" message="tns:IWcfApplicationService_CredentialActivate_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialActivateWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_CredentialActivate_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityCreate">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityCreate" message="tns:IWcfApplicationService_IdentityCreate_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityCreateResponse" message="tns:IWcfApplicationService_IdentityCreate_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityCreateWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityCreate_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentityExists">
+      <wsdl:input wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityExists" message="tns:IWcfApplicationService_IdentityExists_InputMessage" />
+      <wsdl:output wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityExistsResponse" message="tns:IWcfApplicationService_IdentityExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityExistsWcfFaultFault" name="WcfFaultFault" message="tns:IWcfApplicationService_IdentityExists_WcfFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd0" namespace="com.ScrimpNet.Security/2011/03" />
+  <xs:complexType name="PasswordChangeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="com.ScrimpNet.Security/2011/03" base="q1:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordChangeRequest" nillable="true" type="tns:PasswordChangeRequest" />
+  <xs:complexType name="PasswordChangeReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="com.ScrimpNet.Security/2011/03" base="q2:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordChangeReply" nillable="true" type="tns:PasswordChangeReply" />
+  <xs:complexType name="RoleListContract">
+    <xs:sequence>
+      <xs:element xmlns:q3="com.ScrimpNet.Security/2011/03" minOccurs="0" maxOccurs="unbounded" name="RoleContract" nillable="true" type="q3:RoleContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleListContract" nillable="true" type="tns:RoleListContract" />
+</xs:schema>

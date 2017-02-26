@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="com.ScrimpNet.Security/2011/03" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HashTag" />
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" />
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Web.Security" />
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="RolesAddUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q1:UsersAddToRolesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersAddToRolesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="com.ScrimpNet.Security/2011/03" base="q2:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Rolenames" nillable="true" type="q3:ArrayOfstring" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Usernames" nillable="true" type="q4:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q5="com.ScrimpNet.Security/2011/03" name="UsersAddToRolesRequest" nillable="true" type="q5:UsersAddToRolesRequest" />
+  <xs:complexType name="RoleMessageBaseRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="com.ScrimpNet.Security/2011/03" base="q6:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q7="com.ScrimpNet.Security/2011/03" name="RoleMessageBaseRequest" nillable="true" type="q7:RoleMessageBaseRequest" />
+  <xs:complexType name="SecureSessionRequestBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="com.ScrimpNet.Security/2011/03" base="q8:ServiceSessionRequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q9="com.ScrimpNet.Security/2011/03" name="SecureSessionRequestBase" nillable="true" type="q9:SecureSessionRequestBase" />
+  <xs:complexType name="ServiceSessionRequestBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element xmlns:q10="com.ScrimpNet.Security/2011/03" name="ServiceSessionRequestBase" nillable="true" type="q10:ServiceSessionRequestBase" />
+  <xs:element name="RolesAddUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RolesAddUsersResult" nillable="true" type="q11:UsersAddToRolesReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersAddToRolesReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="com.ScrimpNet.Security/2011/03" base="q12:RoleMessageBaseReply">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q13="com.ScrimpNet.Security/2011/03" name="UsersAddToRolesReply" nillable="true" type="q13:UsersAddToRolesReply" />
+  <xs:complexType name="RoleMessageBaseReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="com.ScrimpNet.Security/2011/03" base="q14:SecureSessionReplyBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q15="com.ScrimpNet.Security/2011/03" name="RoleMessageBaseReply" nillable="true" type="q15:RoleMessageBaseReply" />
+  <xs:complexType name="SecureSessionReplyBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="com.ScrimpNet.Security/2011/03" base="q16:ServiceSessionReplyBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q17="com.ScrimpNet.Security/2011/03" name="SecureSessionReplyBase" nillable="true" type="q17:SecureSessionReplyBase" />
+  <xs:complexType name="ServiceSessionReplyBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/HashTag" base="q18:ActionReply">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q19="com.ScrimpNet.Security/2011/03" name="ServiceSessionReplyBase" nillable="true" type="q19:ServiceSessionReplyBase" />
+  <xs:element name="RoleCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q20:RoleCreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleCreateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="com.ScrimpNet.Security/2011/03" base="q21:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q22="com.ScrimpNet.Security/2011/03" name="RoleCreateRequest" nillable="true" type="q22:RoleCreateRequest" />
+  <xs:element name="RoleCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RoleCreateResult" nillable="true" type="q23:RoleCreateReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleCreateReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="com.ScrimpNet.Security/2011/03" base="q24:RoleMessageBaseReply">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q25="com.ScrimpNet.Security/2011/03" name="RoleCreateReply" nillable="true" type="q25:RoleCreateReply" />
+  <xs:element name="RoleDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q26:RoleDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="com.ScrimpNet.Security/2011/03" base="q27:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThrowOnPopulated" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q28="com.ScrimpNet.Security/2011/03" name="RoleDeleteRequest" nillable="true" type="q28:RoleDeleteRequest" />
+  <xs:element name="RoleDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RoleDeleteResult" nillable="true" type="q29:RoleDeleteReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleDeleteReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="com.ScrimpNet.Security/2011/03" base="q30:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q31="com.ScrimpNet.Security/2011/03" name="RoleDeleteReply" nillable="true" type="q31:RoleDeleteReply" />
+  <xs:element name="FindUsersInRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q32:RoleFindUsersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleFindUsersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="com.ScrimpNet.Security/2011/03" base="q33:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsernamePattern" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q34="com.ScrimpNet.Security/2011/03" name="RoleFindUsersRequest" nillable="true" type="q34:RoleFindUsersRequest" />
+  <xs:element name="FindUsersInRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="com.ScrimpNet.Security/2011/03" minOccurs="0" name="FindUsersInRoleResult" nillable="true" type="q35:RoleFindUsersReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleFindUsersReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="com.ScrimpNet.Security/2011/03" base="q36:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Usernames" nillable="true" type="q37:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q38="com.ScrimpNet.Security/2011/03" name="RoleFindUsersReply" nillable="true" type="q38:RoleFindUsersReply" />
+  <xs:element name="RolesGetAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q39:RolesGetAllRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesGetAllRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="com.ScrimpNet.Security/2011/03" base="q40:RoleMessageBaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q41="com.ScrimpNet.Security/2011/03" name="RolesGetAllRequest" nillable="true" type="q41:RolesGetAllRequest" />
+  <xs:element name="RolesGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RolesGetAllResult" nillable="true" type="q42:RolesGetAllReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesGetAllReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="com.ScrimpNet.Security/2011/03" base="q43:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RoleNames" nillable="true" type="q44:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q45="com.ScrimpNet.Security/2011/03" name="RolesGetAllReply" nillable="true" type="q45:RolesGetAllReply" />
+  <xs:element name="RoleExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q46:RoleExistsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleExistsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q47="com.ScrimpNet.Security/2011/03" base="q47:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q48="com.ScrimpNet.Security/2011/03" name="RoleExistsRequest" nillable="true" type="q48:RoleExistsRequest" />
+  <xs:element name="RoleExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RoleExistsResult" nillable="true" type="q49:RoleExistsReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleExistsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q50="com.ScrimpNet.Security/2011/03" base="q50:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleExists" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q51="com.ScrimpNet.Security/2011/03" name="RoleExistsReply" nillable="true" type="q51:RoleExistsReply" />
+  <xs:element name="RolesForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q52:RolesContainingUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesContainingUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="com.ScrimpNet.Security/2011/03" base="q53:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q54="com.ScrimpNet.Security/2011/03" name="RolesContainingUserRequest" nillable="true" type="q54:RolesContainingUserRequest" />
+  <xs:element name="RolesForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RolesForUserResult" nillable="true" type="q55:RolesContainingUserReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesContainingUserReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="com.ScrimpNet.Security/2011/03" base="q56:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RoleNames" nillable="true" type="q57:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q58="com.ScrimpNet.Security/2011/03" name="RolesContainingUserReply" nillable="true" type="q58:RolesContainingUserReply" />
+  <xs:element name="RoleGetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q59:RoleGetUsersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleGetUsersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q60="com.ScrimpNet.Security/2011/03" base="q60:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q61="com.ScrimpNet.Security/2011/03" name="RoleGetUsersRequest" nillable="true" type="q61:RoleGetUsersRequest" />
+  <xs:element name="RoleGetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RoleGetUsersResult" nillable="true" type="q62:RoleGetUsersReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleGetUsersReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q63="com.ScrimpNet.Security/2011/03" base="q63:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Usernames" nillable="true" type="q64:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q65="com.ScrimpNet.Security/2011/03" name="RoleGetUsersReply" nillable="true" type="q65:RoleGetUsersReply" />
+  <xs:element name="RoleContainsUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q66:RoleContainsUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleContainsUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q67="com.ScrimpNet.Security/2011/03" base="q67:RoleMessageBaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q68="com.ScrimpNet.Security/2011/03" name="RoleContainsUserRequest" nillable="true" type="q68:RoleContainsUserRequest" />
+  <xs:element name="RoleContainsUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RoleContainsUserResult" nillable="true" type="q69:RoleContainsUserReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RoleContainsUserReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q70="com.ScrimpNet.Security/2011/03" base="q70:RoleMessageBaseReply">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q71="com.ScrimpNet.Security/2011/03" name="RoleContainsUserReply" nillable="true" type="q71:RoleContainsUserReply" />
+  <xs:element name="RolesRemoveUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q72:RolesRemoveUsersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesRemoveUsersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q73="com.ScrimpNet.Security/2011/03" base="q73:RolesContainingUserRequest">
+        <xs:sequence>
+          <xs:element xmlns:q74="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RoleNames" nillable="true" type="q74:ArrayOfstring" />
+          <xs:element xmlns:q75="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Usernames" nillable="true" type="q75:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q76="com.ScrimpNet.Security/2011/03" name="RolesRemoveUsersRequest" nillable="true" type="q76:RolesRemoveUsersRequest" />
+  <xs:element name="RolesRemoveUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="com.ScrimpNet.Security/2011/03" minOccurs="0" name="RolesRemoveUsersResult" nillable="true" type="q77:RolesRemoveUsersReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RolesRemoveUsersReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q78="com.ScrimpNet.Security/2011/03" base="q78:RolesContainingUserReply">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q79="com.ScrimpNet.Security/2011/03" name="RolesRemoveUsersReply" nillable="true" type="q79:RolesRemoveUsersReply" />
+  <xs:element name="CredentialChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" minOccurs="0" name="request" nillable="true" type="q80:PasswordChangeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CredentialChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" minOccurs="0" name="CredentialChangePasswordResult" nillable="true" type="q81:PasswordChangeReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CredentialChangePasswordQA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q82:PasswordQAChangeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordQAChangeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q83="com.ScrimpNet.Security/2011/03" base="q83:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q84="com.ScrimpNet.Security/2011/03" name="PasswordQAChangeRequest" nillable="true" type="q84:PasswordQAChangeRequest" />
+  <xs:element name="CredentialChangePasswordQAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialChangePasswordQAResult" nillable="true" type="q85:PasswordQAChangeReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordQAChangeReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q86="com.ScrimpNet.Security/2011/03" base="q86:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q87="com.ScrimpNet.Security/2011/03" name="PasswordQAChangeReply" nillable="true" type="q87:PasswordQAChangeReply" />
+  <xs:element name="CredentialVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q88:UserVerifyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserVerifyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q89="com.ScrimpNet.Security/2011/03" base="q89:ServiceSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChallengeAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChallengePrompt" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q90="com.ScrimpNet.Security/2011/03" name="UserVerifyRequest" nillable="true" type="q90:UserVerifyRequest" />
+  <xs:element name="CredentialVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialVerifyResult" nillable="true" type="q91:UserVerifyReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserVerifyReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q92="com.ScrimpNet.Security/2011/03" base="q92:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Context" nillable="true" type="q92:SecurityContext" />
+          <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q93="com.ScrimpNet.Security/2011/03" name="UserVerifyReply" nillable="true" type="q93:UserVerifyReply" />
+  <xs:complexType name="SecurityContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="IdentityToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/HashTag.ApplicationServices" minOccurs="0" name="Roles" nillable="true" type="q94:RoleListContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q95="com.ScrimpNet.Security/2011/03" name="SecurityContext" nillable="true" type="q95:SecurityContext" />
+  <xs:complexType name="RoleContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EffectiveFromUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveToUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q96="com.ScrimpNet.Security/2011/03" name="RoleContract" nillable="true" type="q96:RoleContract" />
+  <xs:element name="CredentialDefaultsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q97:CredentialDefaultGetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CredentialDefaultGetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q98="com.ScrimpNet.Security/2011/03" base="q98:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdentityName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q99="com.ScrimpNet.Security/2011/03" name="CredentialDefaultGetRequest" nillable="true" type="q99:CredentialDefaultGetRequest" />
+  <xs:element name="CredentialDefaultsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialDefaultsGetResult" nillable="true" type="q100:CredentialDefaultGetReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CredentialDefaultGetReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q101="com.ScrimpNet.Security/2011/03" base="q101:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChallengeAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChallengeQuestion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q102="com.ScrimpNet.Security/2011/03" name="CredentialDefaultGetReply" nillable="true" type="q102:CredentialDefaultGetReply" />
+  <xs:element name="CredentialUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q103:UserCredentialSaveRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserCredentialSaveRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q104="com.ScrimpNet.Security/2011/03" base="q104:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChallengeAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChallengeQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewIdentityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalIdentityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalPassword" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q105="com.ScrimpNet.Security/2011/03" name="UserCredentialSaveRequest" nillable="true" type="q105:UserCredentialSaveRequest" />
+  <xs:element name="CredentialUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialUpdateResult" nillable="true" type="q106:UserCredentialSaveReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserCredentialSaveReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q107="com.ScrimpNet.Security/2011/03" base="q107:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivationKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q108="com.ScrimpNet.Security/2011/03" name="UserCredentialSaveReply" nillable="true" type="q108:UserCredentialSaveReply" />
+  <xs:element name="IdentityDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q109:UserDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q110="com.ScrimpNet.Security/2011/03" base="q110:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeletedRelatedData" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q111="com.ScrimpNet.Security/2011/03" name="UserDeleteRequest" nillable="true" type="q111:UserDeleteRequest" />
+  <xs:element name="IdentityDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityDeleteResult" nillable="true" type="q112:UserDeleteReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserDeleteReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q113="com.ScrimpNet.Security/2011/03" base="q113:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q114="com.ScrimpNet.Security/2011/03" name="UserDeleteReply" nillable="true" type="q114:UserDeleteReply" />
+  <xs:element name="FindUsersByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q115:UsersFindByEMailRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersFindByEMailRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q116="com.ScrimpNet.Security/2011/03" base="q116:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EMailPattern" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q117="com.ScrimpNet.Security/2011/03" name="UsersFindByEMailRequest" nillable="true" type="q117:UsersFindByEMailRequest" />
+  <xs:element name="FindUsersByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="com.ScrimpNet.Security/2011/03" minOccurs="0" name="FindUsersByEmailResult" nillable="true" type="q118:UsersFindByEMailReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersFindByEMailReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q119="com.ScrimpNet.Security/2011/03" base="q119:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+          <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="UserList" nillable="true" type="q120:MembershipUserCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q121="com.ScrimpNet.Security/2011/03" name="UsersFindByEMailReply" nillable="true" type="q121:UsersFindByEMailReply" />
+  <xs:element name="FindUsersByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q122:UsersFindByNameRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersFindByNameRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q123="com.ScrimpNet.Security/2011/03" base="q123:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="UserNamePatter" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q124="com.ScrimpNet.Security/2011/03" name="UsersFindByNameRequest" nillable="true" type="q124:UsersFindByNameRequest" />
+  <xs:element name="FindUsersByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="com.ScrimpNet.Security/2011/03" minOccurs="0" name="FindUsersByNameResult" nillable="true" type="q125:UserFindByNameReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserFindByNameReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q126="com.ScrimpNet.Security/2011/03" base="q126:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+          <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="UserList" nillable="true" type="q127:MembershipUserCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q128="com.ScrimpNet.Security/2011/03" name="UserFindByNameReply" nillable="true" type="q128:UserFindByNameReply" />
+  <xs:element name="IdentityGetAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q129:UsersGetAllRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersGetAllRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q130="com.ScrimpNet.Security/2011/03" base="q130:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DomainKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q131="com.ScrimpNet.Security/2011/03" name="UsersGetAllRequest" nillable="true" type="q131:UsersGetAllRequest" />
+  <xs:element name="IdentityGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityGetAllResult" nillable="true" type="q132:UsersGetAllReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsersGetAllReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q133="com.ScrimpNet.Security/2011/03" base="q133:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+          <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="UserList" nillable="true" type="q134:MembershipUserCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q135="com.ScrimpNet.Security/2011/03" name="UsersGetAllReply" nillable="true" type="q135:UsersGetAllReply" />
+  <xs:element name="GetNumberOfUsersOnline">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNumberOfUsersOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNumberOfUsersOnlineResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdentityGetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q136:PasswordGetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordGetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q137="com.ScrimpNet.Security/2011/03" base="q137:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q138="com.ScrimpNet.Security/2011/03" name="PasswordGetRequest" nillable="true" type="q138:PasswordGetRequest" />
+  <xs:element name="IdentityGetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityGetPasswordResult" nillable="true" type="q139:PasswordGetReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordGetReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q140="com.ScrimpNet.Security/2011/03" base="q140:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q141="com.ScrimpNet.Security/2011/03" name="PasswordGetReply" nillable="true" type="q141:PasswordGetReply" />
+  <xs:element name="IdentityGetByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q142:UserGetByProviderKeyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserGetByProviderKeyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q143="com.ScrimpNet.Security/2011/03" base="q143:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsOnLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProviderKey" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q144="com.ScrimpNet.Security/2011/03" name="UserGetByProviderKeyRequest" nillable="true" type="q144:UserGetByProviderKeyRequest" />
+  <xs:element name="IdentityGetByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityGetByKeyResult" nillable="true" type="q145:UserGetByProviderKeyReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserGetByProviderKeyReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q146="com.ScrimpNet.Security/2011/03" base="q146:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="User" nillable="true" type="q147:MembershipUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q148="com.ScrimpNet.Security/2011/03" name="UserGetByProviderKeyReply" nillable="true" type="q148:UserGetByProviderKeyReply" />
+  <xs:element name="IdentityGetByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q149:UserGetByUserNameRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserGetByUserNameRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q150="com.ScrimpNet.Security/2011/03" base="q150:ServiceSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserIsOnLine" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q151="com.ScrimpNet.Security/2011/03" name="UserGetByUserNameRequest" nillable="true" type="q151:UserGetByUserNameRequest" />
+  <xs:element name="IdentityGetByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityGetByNameResult" nillable="true" type="q152:UserGetByUserNameReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserGetByUserNameReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q153="com.ScrimpNet.Security/2011/03" base="q153:ServiceSessionReplyBase">
+        <xs:sequence>
+          <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="User" nillable="true" type="q154:MembershipUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q155="com.ScrimpNet.Security/2011/03" name="UserGetByUserNameReply" nillable="true" type="q155:UserGetByUserNameReply" />
+  <xs:element name="IdentityGetByEMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q156:UsernameGetByEMailRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsernameGetByEMailRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q157="com.ScrimpNet.Security/2011/03" base="q157:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EMailAddress" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q158="com.ScrimpNet.Security/2011/03" name="UsernameGetByEMailRequest" nillable="true" type="q158:UsernameGetByEMailRequest" />
+  <xs:element name="IdentityGetByEMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityGetByEMailResult" nillable="true" type="q159:UsernameGetByEMailReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UsernameGetByEMailReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q160="com.ScrimpNet.Security/2011/03" base="q160:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q161="com.ScrimpNet.Security/2011/03" name="UsernameGetByEMailReply" nillable="true" type="q161:UsernameGetByEMailReply" />
+  <xs:element name="CredentialReset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q162:PasswordResetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordResetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q163="com.ScrimpNet.Security/2011/03" base="q163:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PasswordAnswer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q164="com.ScrimpNet.Security/2011/03" name="PasswordResetRequest" nillable="true" type="q164:PasswordResetRequest" />
+  <xs:element name="CredentialResetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialResetResult" nillable="true" type="q165:PasswordResetReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PasswordResetReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q166="com.ScrimpNet.Security/2011/03" base="q166:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q167="com.ScrimpNet.Security/2011/03" name="PasswordResetReply" nillable="true" type="q167:PasswordResetReply" />
+  <xs:element name="SettingsRetrieve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q168:MembershipSettingRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MembershipSettingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q169="com.ScrimpNet.Security/2011/03" base="q169:ServiceSessionRequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q170="com.ScrimpNet.Security/2011/03" name="MembershipSettingRequest" nillable="true" type="q170:MembershipSettingRequest" />
+  <xs:element name="SettingsRetrieveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="com.ScrimpNet.Security/2011/03" minOccurs="0" name="SettingsRetrieveResult" nillable="true" type="q171:MembershipSettingReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MembershipSettingReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q172="com.ScrimpNet.Security/2011/03" base="q172:ServiceSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnablePasswordReset" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnablePasswordRetrieval" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaxInvalidPasswordAttempts" type="xs:int" />
+          <xs:element minOccurs="0" name="MinRequiredNonAlphanumericCharacters" type="xs:int" />
+          <xs:element minOccurs="0" name="MinRequiredPasswordLength" type="xs:int" />
+          <xs:element minOccurs="0" name="PasswordAttemptWindow" type="xs:int" />
+          <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="PasswordFormat" type="q173:MembershipPasswordFormat" />
+          <xs:element minOccurs="0" name="PasswordStrengthRegularExpression" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequiresQuestionAndAnswer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RequiresUniqueEmail" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q174="com.ScrimpNet.Security/2011/03" name="MembershipSettingReply" nillable="true" type="q174:MembershipSettingReply" />
+  <xs:element name="CredentialUnlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q175:UserUnlockRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserUnlockRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q176="com.ScrimpNet.Security/2011/03" base="q176:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q177="com.ScrimpNet.Security/2011/03" name="UserUnlockRequest" nillable="true" type="q177:UserUnlockRequest" />
+  <xs:element name="CredentialUnlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialUnlockResult" nillable="true" type="q178:UserUnlockReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserUnlockReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q179="com.ScrimpNet.Security/2011/03" base="q179:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultStatus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q180="com.ScrimpNet.Security/2011/03" name="UserUnlockReply" nillable="true" type="q180:UserUnlockReply" />
+  <xs:element name="IdentityUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q181:UserUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserUpdateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q182="com.ScrimpNet.Security/2011/03" base="q182:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="User" nillable="true" type="q183:MembershipUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q184="com.ScrimpNet.Security/2011/03" name="UserUpdateRequest" nillable="true" type="q184:UserUpdateRequest" />
+  <xs:element name="IdentityUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityUpdateResult" nillable="true" type="q185:UserUpdateReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UserUpdateReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q186="com.ScrimpNet.Security/2011/03" base="q186:SecureSessionReplyBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q187="com.ScrimpNet.Security/2011/03" name="UserUpdateReply" nillable="true" type="q187:UserUpdateReply" />
+  <xs:element name="CredentialActivate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q188:CredentialActivateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CredentialActivateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q189="com.ScrimpNet.Security/2011/03" base="q189:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivationKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentityPassword" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q190="com.ScrimpNet.Security/2011/03" name="CredentialActivateRequest" nillable="true" type="q190:CredentialActivateRequest" />
+  <xs:element name="CredentialActivateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="com.ScrimpNet.Security/2011/03" minOccurs="0" name="CredentialActivateResult" nillable="true" type="q191:CredentialActivateReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CredentialActivateReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q192="com.ScrimpNet.Security/2011/03" base="q192:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsActivated" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q193="com.ScrimpNet.Security/2011/03" name="CredentialActivateReply" nillable="true" type="q193:CredentialActivateReply" />
+  <xs:element name="IdentityCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q194:IdentityCreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="IdentityCreateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q195="com.ScrimpNet.Security/2011/03" base="q195:SecureSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="User" nillable="true" type="q196:MembershipUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q197="com.ScrimpNet.Security/2011/03" name="IdentityCreateRequest" nillable="true" type="q197:IdentityCreateRequest" />
+  <xs:element name="IdentityCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityCreateResult" nillable="true" type="q198:IdentityCreateReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="IdentityCreateReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q199="com.ScrimpNet.Security/2011/03" base="q199:SecureSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivationKey" nillable="true" type="xs:string" />
+          <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="CreateStatus" type="q200:MembershipCreateStatus" />
+          <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/System.Web.Security" minOccurs="0" name="User" nillable="true" type="q201:MembershipUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q202="com.ScrimpNet.Security/2011/03" name="IdentityCreateReply" nillable="true" type="q202:IdentityCreateReply" />
+  <xs:element name="IdentityExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q203="com.ScrimpNet.Security/2011/03" minOccurs="0" name="request" nillable="true" type="q203:IdentityExistsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="IdentityExistsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q204="com.ScrimpNet.Security/2011/03" base="q204:ServiceSessionRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdentityName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q205="com.ScrimpNet.Security/2011/03" name="IdentityExistsRequest" nillable="true" type="q205:IdentityExistsRequest" />
+  <xs:element name="IdentityExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q206="com.ScrimpNet.Security/2011/03" minOccurs="0" name="IdentityExistsResult" nillable="true" type="q206:IdentityExistsReply" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="IdentityExistsReply">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q207="com.ScrimpNet.Security/2011/03" base="q207:ServiceSessionReplyBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdentityExists" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q208="com.ScrimpNet.Security/2011/03" name="IdentityExistsReply" nillable="true" type="q208:IdentityExistsReply" />
+</xs:schema>

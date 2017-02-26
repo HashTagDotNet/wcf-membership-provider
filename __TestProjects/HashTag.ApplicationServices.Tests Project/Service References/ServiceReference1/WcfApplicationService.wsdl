@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="com.ScrimpNet.Security/2011/03" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfApplicationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="com.ScrimpNet.Security/2011/03" location="http://localhost:56671/AppService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IWcfApplicationService" type="i0:IWcfApplicationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RolesAddUsers">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesAddUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleCreate">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleDelete">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersInRole">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RolesGetAll">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleExists">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RolesForUser">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleGetUsers">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleGetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RoleContainsUser">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RoleContainsUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RolesRemoveUsers">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/RolesRemoveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialChangePassword">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialChangePasswordQA">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialChangePasswordQA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialVerify">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialDefaultsGet">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialDefaultsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialUpdate">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityDelete">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByEmail">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersByName">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/FindUsersByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetAll">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfUsersOnline">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/GetNumberOfUsersOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetPassword">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByKey">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByName">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityGetByEMail">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityGetByEMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialReset">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialReset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SettingsRetrieve">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/SettingsRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialUnlock">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialUnlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityUpdate">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CredentialActivate">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/CredentialActivate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityCreate">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdentityExists">
+      <soap:operation soapAction="com.ScrimpNet.Security/2011/03/IWcfApplicationService/IdentityExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WcfFaultFault">
+        <soap:fault use="literal" name="WcfFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfApplicationService">
+    <wsdl:port name="BasicHttpBinding_IWcfApplicationService" binding="tns:BasicHttpBinding_IWcfApplicationService">
+      <soap:address location="http://localhost:56671/AppService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

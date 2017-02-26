@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/HashTag" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HashTag" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:56671/AppService.svc?xsd=xsd4" namespace="HashTag.com/2011/03/" />
+  <xs:complexType name="ActionReply">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorrelationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="InnerReplies" nillable="true" type="tns:ArrayOfActionReply" />
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ActionReplyMessageList" />
+      <xs:element minOccurs="0" name="Status" type="tns:ActionStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionReply" nillable="true" type="tns:ActionReply" />
+  <xs:complexType name="ArrayOfActionReply">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionReply" nillable="true" type="tns:ActionReply" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionReply" nillable="true" type="tns:ArrayOfActionReply" />
+  <xs:complexType name="ActionReplyMessageList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionReplyMessageItem" nillable="true" type="tns:ActionReplyMessageItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionReplyMessageList" nillable="true" type="tns:ActionReplyMessageList" />
+  <xs:complexType name="ActionReplyMessageItem">
+    <xs:sequence>
+      <xs:element xmlns:q1="HashTag.com/2011/03/" minOccurs="0" name="Exception" nillable="true" type="q1:LogException" />
+      <xs:element minOccurs="0" name="MessageText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Severity" type="tns:ActionStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionReplyMessageItem" nillable="true" type="tns:ActionReplyMessageItem" />
+  <xs:simpleType name="ActionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Information">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">200</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Created">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">201</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Accepted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">202</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NoContent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">204</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AuthenticationRequired">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">401</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Forbidden">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">403</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NotFound">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">404</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">406</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RequestTimeOut">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">408</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Conflict">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">409</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InternalError">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">500</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActionStatus" nillable="true" type="tns:ActionStatus" />
+</xs:schema>
